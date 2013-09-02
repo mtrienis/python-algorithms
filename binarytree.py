@@ -1,14 +1,13 @@
 class BinaryTree:
 
     def __init__(self, name):
-        self.name = name
-        self.visited = False
+        return NotImplemented
 
     def visit(self):
-        self.visited = True
+        return NotImplemented
 
     def __str__(self):
-        return self.name
+        return NotImplemented
 
     def __repr__(self):
-        return self.name + ' ' + str(self.visited)
+        return NotImplemented

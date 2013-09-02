@@ -1,6 +1,4 @@
-from node import Node
 from search import Search
-from pprint import pprint
 
 import unittest
 
@@ -10,14 +8,6 @@ class TestDfs(unittest.TestCase):
     @classmethod
     def setUpClass(self):
 
-        self.a = Node('a')
-        self.b = Node('b')
-        self.c = Node('c')
-        self.d = Node('d')
-        self.e = Node('e')
-        self.f = Node('f')
-        self.g = Node('g')
-        self.h = Node('h')
 
         #      a
         #    /   \
