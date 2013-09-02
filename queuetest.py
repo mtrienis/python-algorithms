@@ -4,7 +4,7 @@ from pprint import pprint
 
 import unittest
 
-# test class for the triangle class
+# test class for the queue data structure
 class TestQueue(unittest.TestCase):
 
     @classmethod
@@ -18,10 +18,12 @@ class TestQueue(unittest.TestCase):
         self.queue.enqueue('3')
         
         first = self.queue.dequeue()
+        second = self.queue.dequeue()
+        third = self.queue.dequeue()
 
         self.assertEqual(first,'1')
-
-
+        self.assertEqual(second,'2')
+        self.assertEqual(third, '3')
 
 # runs the unit tests
 if __name__ == '__main__':

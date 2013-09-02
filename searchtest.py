@@ -54,15 +54,14 @@ class TestDfs(unittest.TestCase):
         self.search = Search()
 
         
-
-    def test_depthFirstSearch(self):
+    def test_depth_first_search(self):
         print '---- depth first search ----'
-        print self.search.depthFirstSearch(self.tree, 'a')
+        print self.search.depth_first_search(self.tree, 'a')
 
 
-    def test_breadthFirstSearch(self):
+    def test_breadth_first_search(self):
         print '---- breadth first search ----'
-        print self.search.breadthFirstSearch(self.tree, 'a')
+        print self.search.breadth_first_search(self.tree, 'a')
 
 # runs the unit tests
 if __name__ == '__main__':

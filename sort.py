@@ -1,10 +1,10 @@
 class Sort:
 
-    def quickSort(self):
+    def quick_sort(self):
         return NotImplemented
 
-    def mergeSort(self):
+    def merge_sort(self):
         return NotImplemented
 
-    def bucketSort(self):
+    def bucket_sort(self):
         return NotImplemented

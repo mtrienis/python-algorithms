@@ -1,7 +1,10 @@
+from queue import Queue
+
+# A class for search algorithms
 class Search:
 
     # depth first search
-    def depthFirstSearch(self, tree, parent, visited=[]):
+    def depth_first_search(self, tree, parent, visited=[]):
         
         # visit the node and store it so that you do not traverse it again
         visited = visited + [parent]
@@ -16,27 +19,28 @@ class Search:
             if child not in visited:
 
                 # recursive call 
-                visited = self.depthFirstSearch(tree, child, visited)
+                visited = self.depth_first_search(tree, child, visited)
         
         # return all visited
         return visited
 
-    def breadthFirstSearch(self, tree, parent, visited=[]):
+    # breadth first search
+    def breadth_first_search(self, tree, parent, visited=[]):
 
         # create a queue from a list
-        queue = []
+        queue = Queue()
 
         # add the parent node to the queue
-        queue.append(parent)
+        queue.enqueue(parent)
 
         # mark node as visited to ensure it's not traversed again
         visited = visited + [parent]
 
         # exit when the queue is empty
-        while len(queue) > 0:
+        while queue.is_empty() == False:
 
             # dequeue element            
-            parent = queue.pop(0)
+            parent = queue.dequeue()
 
             # get the children of the parent
             children = tree[parent]
@@ -48,7 +52,7 @@ class Search:
                 if child not in visited:
                 
                     # add child to queue for exporation
-                    queue.append(child)
+                    queue.enqueue(child)
 
                     # visit child node
                     visited = visited + [child]
@@ -56,6 +60,7 @@ class Search:
         # return all visited
         return visited
 
-    def binarySearch(self):
+    # 
+    def binary_search(self, b_tree):
         return NotImplemented
 
