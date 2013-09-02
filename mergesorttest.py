@@ -1,15 +1,15 @@
-from sort import Sort
+from mergesort import MergeSort
 
 import unittest
 
 # test class for the triangle class
-class TestSort(unittest.TestCase):
+class TestMergeSort(unittest.TestCase):
 
     @classmethod
     def setUpClass(self):
 
         self.items = [38, 27, 43, 3, 9, 82, 10]
-        self.sort = Sort()
+        self.sort = MergeSort()
 
         
     def test_merge_sort(self):
